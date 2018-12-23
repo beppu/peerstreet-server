@@ -1,7 +1,7 @@
 
 exports.up = async function(knex, Promise) {
   return knex.schema.createTable('zip_to_cbsa', (table) => {
-    table.integer('zip')
+    table.string('zip')
     table.integer('cbsa')
     table.float('res_ratio')
     table.float('bus_ratio')
