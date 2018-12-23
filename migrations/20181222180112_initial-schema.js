@@ -9,8 +9,8 @@ exports.up = async function(knex, Promise) {
     table.float('tot_ratio')
   }).createTable('cbsa_to_msa', (table) => {
     table.integer('cbsa')
-    table.string('mdiv')
-    table.string('stcou')
+    table.integer('mdiv')
+    table.integer('stcou')
     table.string('name')
     table.string('lsad')
     table.integer('census2010pop')
