@@ -859,6 +859,11 @@ koa@^2.6.2:
     type-is "^1.6.16"
     vary "^1.1.2"
 
+lazy.js@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/lazy.js/-/lazy.js-0.5.1.tgz#9f05c27f42c66ae7f41814c9674d105efcbc432f"
+  integrity sha512-p9v24vaKrzS2mEx3yuzva/3M6I3+HwvXd0pB1Xf/IvsFIMdhQgmym7JBO0e7c0OZmKTo07sCuiCIm6jazSWFNw==
+
 liftoff@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/liftoff/-/liftoff-2.5.0.tgz#2009291bb31cea861bbf10a7c15a28caf75c31ec"
@@ -1052,6 +1057,11 @@ os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
   integrity sha1-/7xJiDNuDoM94MFox+8VISGqf7M=
+
+outdent@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/outdent/-/outdent-0.7.0.tgz#cfd1f1956305141e0cf3e898ada6547373c1997a"
+  integrity sha512-Ue462G+UIFoyQmOzapGIKWS3d/9NHeD/018WGEDZIhN2/VaQpVXbofMcZX0socv1fw4/tmEn7Vd3McOdPZfKzQ==
 
 packet-reader@0.3.1:
   version "0.3.1"
