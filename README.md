@@ -54,6 +54,7 @@ DB_HOST=localhost
 DB_NAME=peerstreet
 DB_USER=ps
 DB_PASSWORD=ps
+PORT=4200
 ```
 
 Install node module dependencies.
@@ -79,3 +80,8 @@ npm start
 
 I would have normally put it in another repo, but the instructions seemed to imply that one repo
 should be delivered, so I put it in this repo in [peerstreet-client/](./peerstreet-client/) .
+
+# Utilities
+
+* **bin/db** - Start `psql` with credentials from `.env`
+* **bin/repl** - Start a Node.js REPL with preloads defined in `.repl.js`

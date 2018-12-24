@@ -6,7 +6,7 @@ const morgan     = require('koa-morgan')
 
 const db         = require('./lib/db')
 
-const port   = process.env.PORT || 3000
+const port   = process.env.PORT || 4200
 const koa    = new Koa()
 const router = new Router()
 
@@ -50,10 +50,18 @@ router.get('/msa', async ctx => {
   }
 })
 
-koa
-  .use(morgan('short', { stream: process.stdout }))
-  .use(bodyParser())
-  .use(router.routes())
-  .listen(port, () => {
-    console.log(`> Ready on https://localhost:${port}`)
-  })
+function main() {
+  koa
+    .use(morgan('short', { stream: process.stdout }))
+    .use(bodyParser())
+    .use(router.routes())
+    .listen(port, () => {
+      console.log(`> Ready on https://localhost:${port}`)
+    })
+}
+
+module.exports = { koa, router, main }
+
+if (require.main === module) {
+  main()
+}

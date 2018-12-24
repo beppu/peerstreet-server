@@ -19,7 +19,7 @@ gem install peerstreet-client-0.1.0.gem
 ```ruby
 require 'peerstreet/client'
   ps  = PeerStreet::Client.new
-# ps  = PeerStreet::Client.new :base_uri => 'http://localhost:3000'
+# ps  = PeerStreet::Client.new :base_uri => 'http://localhost:4200'
 res = ps.msa '90266'
 ```
 
