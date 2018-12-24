@@ -1,0 +1,5 @@
+#!/bin/sh
+export PATH=/home/beppu/.nodebrew/current/bin:$PATH
+cd /home/beppu/src/github.com/beppu/peerstreet-server
+exec 2>&1
+exec chpst -u nobody node index.js
