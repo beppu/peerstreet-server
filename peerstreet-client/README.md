@@ -14,11 +14,34 @@ gem install peerstreet-client-0.1.0.gem
 
 ## Usage
 
+### Example
+
 ```ruby
 require 'peerstreet/client'
-ps  = PeerStreet::Client.new :base_uri => 'http://peerstreet.bavl.org'
+  ps  = PeerStreet::Client.new
+# ps  = PeerStreet::Client.new :base_uri => 'http://localhost:3000'
 res = ps.msa '90266'
 ```
+
+### PeerStreet::Client
+
+#### new(options)
+
+Construct and initialize the client.  The `options` parameter is optional, but if it's provided,
+it should have a `:base_uri` key which specifies a URL (without a trailing slash) for the REST
+endpoint to use.
+
+#### base_uri
+
+Get the `@base_uri` of the client.
+
+#### base_uri=
+
+Set the `@base_uri` of the client.
+
+#### msa(zip)
+
+Given a ZIP code as a string, return the MSA data found for it.
 
 ## Development
 

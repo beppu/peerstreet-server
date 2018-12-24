@@ -27,7 +27,10 @@ psql
 Create a user
 
 ```sql
-CREATE USER ps WITH PASSWORD 'ps' WITH SUPERUSER;
+CREATE USER ps WITH PASSWORD 'ps' SUPERUSER;
+
+-- PostgreSQL requires that a user have SUPERUSER privileges
+-- in order to use COPY to do a CSV import.
 
 ```
 Create a database.
@@ -41,7 +44,7 @@ CREATE DATABASE peerstreet;
 Clone the git repo.
 
 ```sh
-git clone
+git clone https://github.com/beppu/peerstreet-server.git
 ```
 
 Create a `.env` file with the following contents.
