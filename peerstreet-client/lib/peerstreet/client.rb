@@ -3,7 +3,7 @@ require 'json'
 require 'httparty'
 require_relative 'version'
 
-DEFAULT_BASE_URI = 'https://peerstreet.bavl.org'
+DEFAULT_BASE_URI = 'http://peerstreet.bavl.org'
 
 class PeerStreet::Client
   include HTTParty

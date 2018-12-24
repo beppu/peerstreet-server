@@ -31,6 +31,8 @@ Construct and initialize the client.  The `options` parameter is optional, but i
 it should have a `:base_uri` key which specifies a URL (without a trailing slash) for the REST
 endpoint to use.
 
+By default, the base_uri will be `http://peerstreet.bavl.org` .
+
 #### base_uri
 
 Get the `@base_uri` of the client.
