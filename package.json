@@ -7,6 +7,9 @@
   "author": "John BEPPU <john.beppu@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "dotenv": "^6.2.0",
     "knex": "^0.16.3",
