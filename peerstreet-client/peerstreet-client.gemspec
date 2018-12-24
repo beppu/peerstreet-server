@@ -3,14 +3,14 @@ require File.expand_path("../lib/peerstreet/version", __FILE__)
 
 Gem::Specification.new do |s|
     #Metadata
-    s.name = "peerstreet"
-    s.version = PeerStreet::VERSION
+    s.name = "peerstreet-client"
+    s.version = PeerStreet::Client::VERSION
     s.authors = ["John BEPPU"]
     s.email = ["john.beppu@gmail.com"]
-    s.homepage = "https://github.com/beppu/peerstreet-client"
-    s.summary = %q{REST client for PeerStreet challenge server}
-    s.description = %q{This provides a class for interacting with the REST API I have to build for the test that PeerStreet gave me.}
-    s.licenses = ['']
+    s.homepage = "https://github.com/beppu/peerstreet/client"
+    s.summary = %q{REST API Client for PeerStreet Coding Test Server}
+    s.description = %q{This provides a class for interacting with the REST API described by PeerStreet coding test.}
+    s.licenses = ['MIT']
 # If you want to show a post-install message, uncomment the following lines
 #    s.post_install_message = <<-MSG
 #
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
     s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
     s.require_paths = ['lib']
 
-    
     
     s.add_development_dependency 'rspec', '~> 3'
     
