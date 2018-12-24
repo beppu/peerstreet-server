@@ -11,6 +11,10 @@ const koa    = new Koa()
 const router = new Router()
 
 router.get('/', async ctx => {
+  ctx.body = { name: 'PeerStreet Challenge REST API Server' }
+})
+
+router.get('/msa', async ctx => {
   const zip = ctx.request.query.zip
   if (zip) {
     const msa = await db.msaByZip(zip)

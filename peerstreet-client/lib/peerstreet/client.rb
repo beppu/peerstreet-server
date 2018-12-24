@@ -22,6 +22,6 @@ class PeerStreet::Client
   end
 
   def msa zip
-    self.class.get(url_for('/'), { query: { zip: zip } })
+    self.class.get(url_for('/msa'), { query: { zip: zip } })
   end
 end
