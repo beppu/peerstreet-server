@@ -12,3 +12,4 @@ global.cl     = console.log
 global.Lazy   = require('lazy.js')
 
 global.knexConfig = require('./knexfile')
+global.db = require('./lib/db')
