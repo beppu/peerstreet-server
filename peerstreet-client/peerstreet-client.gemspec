@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
     s.version     = PeerStreet::Client::VERSION
     s.authors     = ["John BEPPU"]
     s.email       = ["john.beppu@gmail.com"]
-    s.homepage    = "https://github.com/beppu/peerstreet/client"
+    s.homepage    = "https://github.com/beppu/peerstreet-server/peerstreet-client"
     s.summary     = %q{REST API Client for PeerStreet Coding Test Server}
     s.description = %q{This provides a class for interacting with the REST API described by PeerStreet coding test.}
     s.licenses    = ['MIT']
