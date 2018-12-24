@@ -16,27 +16,36 @@ router.get('/', async ctx => {
 
 router.get('/msa', async ctx => {
   const zip = ctx.request.query.zip
-  if (zip) {
-    const msa = await db.msaByZip(zip)
-    if (msa) {
-      ctx.body = {
-        zip,
-        cbsa:            msa.cbsa,
-        name:            msa.name,
-        popestimate2014: msa.popestimate2014,
-        popestimate2015: msa.popestimate2015
+  try {
+    if (zip) {
+      const msa = await db.msaByZip(zip)
+      if (msa) {
+        ctx.body = {
+          zip,
+          cbsa:            msa.cbsa,
+          name:            msa.name,
+          popestimate2014: msa.popestimate2014,
+          popestimate2015: msa.popestimate2015
+        }
+      } else {
+        ctx.body = {
+          success: false,
+          zip,
+          message: 'MSA for zip code not found.'
+        }
       }
     } else {
       ctx.body = {
         success: false,
-        zip,
-        message: 'MSA for zip code not found.'
+        message: 'No zip code provided.'
       }
     }
-  } else {
+  } catch (err) {
+    console.error(err, err.stack)
+    ctx.status = 500
     ctx.body = {
       success: false,
-      message: 'No zip code provided.'
+      message: err.toString()
     }
   }
 })
