@@ -2,9 +2,9 @@ const dotenv     = require('dotenv').config()
 const Koa        = require('koa')
 const bodyParser = require('koa-bodyparser')
 const Router     = require('koa-router')
+const morgan     = require('koa-morgan')
 
 const db         = require('./lib/db')
-
 
 const port   = process.env.PORT || 3000
 const koa    = new Koa()
@@ -38,6 +38,7 @@ router.get('/', async ctx => {
 })
 
 koa
+  .use(morgan('short', { stream: process.stdout }))
   .use(bodyParser())
   .use(router.routes())
   .listen(port, () => {
