@@ -1,5 +1,3 @@
-require 'uri'
-require 'json'
 require 'httparty'
 require_relative 'version'
 
