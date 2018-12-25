@@ -45,6 +45,7 @@ Clone the git repo.
 
 ```sh
 git clone https://github.com/beppu/peerstreet-server.git
+cd peerstreet-server
 ```
 
 Create a `.env` file with the following contents.
